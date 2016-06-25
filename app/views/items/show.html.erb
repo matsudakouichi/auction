@@ -20,13 +20,14 @@
  <!--  -->
 
 <p>
-  <img src="<%= @item.image_url %>">
+  <%= image_tag @item.image_url %>
 </p>
 
 <p>
-  <a href="/items/<%= @item.id %>/edit" >編集</a>
   <a href="/items">一覧へ</a>
-  <a href="/items/<%= @item.id %>" data-method="delete">削除</a>
+
+  <a href="<%= edit_item_path(@item) %>">編集</a>
+  <a href="<%= item_path(@item) %>" data-method="delete" >削除</a>
 </p>
 
 
